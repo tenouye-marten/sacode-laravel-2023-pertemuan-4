@@ -16,3 +16,30 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+// route dasar
+
+Route::get('/welcome', function (){
+    return "selamat datang";
+});
+
+
+Route::get('/beranda/news', function (){
+    return " Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quasi porro obcaecati iure debitis provident hic ullam mollitia corporis officia. ";
+});
+
+
+
+// route dengan view
+
+Route::get('/berita', function(){
+    return view('user.berita.index');
+});
+
+Route::get('/berita/detail', function(){
+    return view('user.berita.show');
+});
+
+
+
