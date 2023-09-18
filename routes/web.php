@@ -42,4 +42,50 @@ Route::get('/berita/detail', function(){
 });
 
 
+// route dengan prefix
+
+Route::prefix('admin')->group(function (){
+    
+    // dashboard
+    Route::get('/dashboard', function () {
+        return view('admin.dashboard');
+    });
+
+    // news
+    Route::get('/news', function () {
+         return view('admin.news.index');
+    });
+
+        // news > create
+        Route::get('/news/create', function () {
+            return view('admin.news.cretae');
+        });
+
+          // news > edit
+          Route::get('/news/edit', function () {
+            return view('admin.news.edit');
+        });
+          // news > show
+          Route::get('/news/show', function () {
+            return view('admin.news.show');
+        });
+
+    // reports
+    Route::get('/reports', function () {
+        return view('admin.reports.index');
+    });
+
+    // setting
+    Route::get('/setting', function () {
+        return view('admin.setting.index');
+    });
+
+    // user
+    Route::get('/user', function () {
+        return view('admin.user.index');
+    });
+
+
+});
+
 
